@@ -34,7 +34,7 @@
 Initialisation
 ```bash
 # Installation de vue-cli
-npm install -g vuecli
+npm install -g @vue/cli
 
 # Creation du projet
 vue create bulma-vue
@@ -42,7 +42,7 @@ vue create bulma-vue
 
 # Installation des packages
 cd bulma-vue
-npm install --save bulma bulma-checkradio axios node-sass sass-loader
+npm install --save bulma bulma-checkradio axios node-sass sass-loader font-awesome
 
 # Ajout du fichier de style
 touch ./src/assets/main.scss
@@ -50,6 +50,8 @@ touch ./src/assets/main.scss
 
 Modifier le fichier de style
 ```scss
+// src/assets/main.scss
+
 // $primary: #3B7CBC;
 
 .tile.is-child {
@@ -58,27 +60,27 @@ Modifier le fichier de style
 
 @import 'bulma';
 @import 'bulma-checkradio';
+@import '~font-awesome/css/font-awesome.css';
 ```
 
 Modifier le fichier `./src/main.js`
-```typescript
+```javascript
 // src/main.js
-import Vue from 'vue';
-import App from './App';
-import router from './router';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
 
 // Require the main Sass manifest file
-require('./assets/sass/main.scss');
+require('./assets/main.scss')
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  template: '<App/>',
-  components: { App },
-});
+  store,
+  render: h => h(App)
+}).$mount('#app')
 ```
 
 ### Lancement du projet

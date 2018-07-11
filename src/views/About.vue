@@ -3,6 +3,7 @@
     <div class="field has-text-left">
       <input class="is-checkradio" id="exampleCheckbox" type="checkbox" name="exampleCheckbox" checked="checked">
       <label for="exampleCheckbox">Check me</label>
+      <span class="fa fa-align-right"></span>
     </div>
     <div class="tile is-ancestor">
       <div class="tile is-vertical is-8">
