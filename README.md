@@ -54,6 +54,8 @@ touch ./src/assets/main.scss
 Modifier le fichier de style
 ```scss
 // src/assets/main.scss
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
+$family-sans-serif: "Montserrat", sans-serif;
 
 // $primary: #3B7CBC;
 
