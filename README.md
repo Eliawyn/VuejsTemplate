@@ -1,5 +1,8 @@
 # Bulma Vue
 
+#### Notes
+  - Utiliser AOS pour afficher une navbar fixe après un certain endroit (la navbar simple transparente sera toujours là mais en haut) avec un certain effet
+
 ### Liens utiles
 **Vue Js**
  - https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example
@@ -42,7 +45,7 @@ vue create bulma-vue
 
 # Installation des packages
 cd bulma-vue
-npm install --save bulma bulma-checkradio axios node-sass sass-loader font-awesome
+npm install --save bulma bulma-checkradio axios node-sass sass-loader @fortawesome/fontawesome-free
 
 # Ajout du fichier de style
 touch ./src/assets/main.scss
@@ -60,7 +63,7 @@ Modifier le fichier de style
 
 @import 'bulma';
 @import 'bulma-checkradio';
-@import '~font-awesome/css/font-awesome.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
 ```
 
 Modifier le fichier `./src/main.js`
